@@ -49,12 +49,16 @@ for (let i = 0; i < 4; i++){
         console.log("You Lost!");
         ("#lost").html(lost);
         //object.addEventListener("reset", myScript);
+        //or document.getElementById("show-number").innerHTML = "<h2>" + number + "</h2>";
+
     } 
 
     else if(previous === randomresult){
         console.log("You Won!");
         ("#win").html(win);
         //object.addEventListener("reset", myScript);
+        //or document.getElementById("show-number").innerHTML = "<h2>" + number + "</h2>";
+
     }
 
     }
