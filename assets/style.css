@@ -1,3 +1,5 @@
+
+
 body {
   background-image: url("/Users/victoriasorone/Documents/GitHub/homework/unit-4-game/images/IMG_2128.jpg");
   background-repeat: no-repeat;
@@ -5,6 +7,28 @@ body {
 }
 
 .button1 {
- image: url("/Users/victoriasorone/Documents/GitHub/homework/unit-4-game/images/images2.jpg");
- block-size: 200px * 200px;
+ object-fit: contain;
+ width: 200px;
+ height: 200px;
+ background-image: url("/Users/victoriasorone/Documents/GitHub/homework/unit-4-game/images/images/images3.jpg");
+}
+
+.button2 {
+flex-shrink: initial;
+ width: 200px;
+ height: 200px;
+ background-image: url("/Users/victoriasorone/Documents/GitHub/homework/unit-4-game/images/blue.jpg");
+}
+.button3{
+flex-shrink: initial;
+ width: 200px;
+ height: 200px;
+ background-image: url("/Users/victoriasorone/Documents/GitHub/homework/unit-4-game/images/images3.jpg");
+}
+.button4{
+flex-shrink: initial;
+ width: 200px;
+ height: 200px;
+ background-image: url("/Users/victoriasorone/Documents/GitHub/homework/unit-4-game/images/images2.jpg");
+ 
 }
