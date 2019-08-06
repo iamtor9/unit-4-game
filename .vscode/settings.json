@@ -1,0 +1,7 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.find.autoFindInSelection": true,
+    "editor.accessibilitySupport": "on",
+    "editor.tabCompletion": "on"
+}

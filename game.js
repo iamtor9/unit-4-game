@@ -9,7 +9,8 @@ let lost = 0;
 let win = 0;
 let previous = 0;
 
-let startGame = function () {
+let reset = function () {
+//create click me button?
 
 randomresult = Math.floor(Math.random() * 100) + 19;
 
