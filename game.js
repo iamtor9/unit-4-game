@@ -5,41 +5,55 @@
 
 //a new random number will be generated each time there is a win or loss
 let randomresult;
-let lost;
-let win;
+let lost = 0;
+let win = 0;
 let previous = 0;
 
-randomresult = Math.floor(Math.random() * 59) + 30;
-    console.log(randomresult);
+let startGame = function () {
+
+randomresult = Math.floor(Math.random() * 100) + 19;
 
 ("#result").html('Random Result: ' + randomresult);
 
 for (let i = 0; i < 4; i++){
     
     let random = Math.floor(Math.random() * 11) + 1;
-    console.log(random);
+    //console.log(random);
 
-    let crystal= ("div");
+    let crystal= ("<div>");
         crystal.attr({
             "class": 'crystal',
             "data-random": random
         });
 
-    ("crystals").append(crystal);
-}
-// create crystal "on click function"
+        crystal.html(random);
 
-  (".crystal").onclick('click', function () {
+    ("crystals").append(crystal);
+    
+    }
+}
+
+    //randomresult.addEventListener("reset", myScript);
+
+// create crystal "on click function"
+//when the user clicks on any of the four crystals
+
+    document.getElemendById(onclick)('click',function () {
       
     let num = parseInt(this).attr("data-random");
-    previous += num;
+        previous += num;
+        console.log(previous);
 
     if (previous > randomresult){
         console.log("You Lost!");
+        ("#lost").html(lost);
+        //object.addEventListener("reset", myScript);
     } 
 
     else if(previous === randomresult){
         console.log("You Won!");
+        ("#win").html(win);
+        //object.addEventListener("reset", myScript);
     }
 
     }
