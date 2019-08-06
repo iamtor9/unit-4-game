@@ -7,6 +7,7 @@
 let randomresult;
 let lost;
 let win;
+let previous = 0;
 
 randomresult = Math.floor(Math.random() * 59) + 30;
     console.log(randomresult);
@@ -24,11 +25,28 @@ for (let i = 0; i < 4; i++){
             "data-random": random
         });
 
-
     ("crystals").append(crystal);
 }
 // create crystal "on click function"
+
   (".crystal").onclick('click', function () {
+      
+    let num = parseInt(this).attr("data-random");
+    previous += num;
+
+    if (previous > randomresult){
+        console.log("You Lost!");
+    } 
+
+    else if(previous === randomresult){
+        console.log("You Won!");
+    }
+
+    }
+
+    console.log(previous);
+
+  });
 
     console.log(this).attr("data-random");
   });
