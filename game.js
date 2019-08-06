@@ -1,59 +1,41 @@
-//player will have to guess the answer, just like in Word Guess. This time, though, the player will guess with numbers instead of letters.
+// a game with 4 crystals
+// random number result chosen by the computer
+//each crystal is worth a random number between 1 - 12
 
 
-let red = 0,
-let y = 1,
-let z = 2,
-let v = 3,
+//a new random number will be generated each time there is a win or loss
+let randomresult;
+let lost;
+let win;
+
+randomresult = Math.floor(Math.random() * 59) + 30;
+    console.log(randomresult);
+
+("#result").html('Random Result: ' + randomresult);
+
+for (let i = 0; i < 4; i++){
+    
+    let random = Math.floor(Math.random() * 11) + 1;
+    console.log(random);
+
+    let crystal= ("div");
+        crystal.attr({
+            "class": 'crystal',
+            "data-random": random
+        });
+
+
+    ("crystals").append(crystal);
 }
+// create crystal "on click function"
+  (".crystal").onclick('click', function () {
 
-//Here's how the app works:
+    console.log(this).attr("data-random");
+  });
 
-
-//There will be four crystals displayed as buttons on the page.
-
-<button>crystal1</button>
-<button>crystal2</button>
-<button>crystal3</button>
-<button>crystal4</button>
-
-//The player will be shown a random number at the start of the game.
-
-onclick
-start
-button
-randomNumber
-computerChoice
-
-//When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
-
-//Your game will hide this amount until the player clicks a crystal.
-//When they do click one, update the player's score counter.
-
-
-
-//The player wins if their total score matches the random number from the beginning of the game.
-
-
-//The player loses if their score goes above the random number.
-
-
-//The game restarts whenever the player wins or loses.
-
-//When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
-
-
-
-//The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
-
-
-
-
-
-Option 1 Game design notes
-
-
-The random number shown at the start of the game should be between 19 - 120.
-
-
-Each crystal should have a random hidden value between 1 - 12.
+console.log(random_result)
+//when the user clicks on any of the four crystals, 
+//it will be added tp the previous result
+//until it is equal to the total of the random result score
+//if crystal count is greater than random result, player loses
+//if crystal count is equals random result, player wins
