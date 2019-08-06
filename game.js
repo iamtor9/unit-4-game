@@ -1,13 +1,28 @@
 // a game with 4 crystals
 // random number result chosen by the computer
 //each crystal is worth a random number between 1 - 12
+//create array
 
+let crystals = [];
+
+    let button1 = document.getElementsByClassName("button1");
+    let button2 = document.getElementsByClassName("button2");
+    let button3 = document.getElementsByClassName("button3");
+    let button4 = document.getElementsByClassName("button4");
+
+let buttonValue = crystals[0]
+    
+let butt1v = crystals[0]
+let butt2v = crystals[1]
+let butt3v = crystals[2]
+let butt4v = crystals[3]
 
 //a new random number will be generated each time there is a win or loss
 let randomresult;
 let lost = 0;
 let win = 0;
 let previous = 0;
+let userScore = 0;
 
 let reset = function () {
 //create click me button?
@@ -21,18 +36,11 @@ for (let i = 0; i < 4; i++){
     let random = Math.floor(Math.random() * 11) + 1;
     //console.log(random);
 
-    let crystal= ("<div>");
-        crystal.attr({
-            "class": 'crystal',
-            "data-random": random
-        });
+//create values for crystals with a push
 
-        crystal.html(random);
 
-    ("crystals").append(crystal);
-    
-    }
-}
+
+ 
 
     //randomresult.addEventListener("reset", myScript);
 

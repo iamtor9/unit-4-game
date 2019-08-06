@@ -1,0 +1,10 @@
+body {
+  background-image: url("/Users/victoriasorone/Documents/GitHub/homework/unit-4-game/images/IMG_2128.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.button1 {
+ image: url("/Users/victoriasorone/Documents/GitHub/homework/unit-4-game/images/images2.jpg");
+ block-size: 200px * 200px;
+}
